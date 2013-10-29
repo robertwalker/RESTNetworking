@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="9O1-Dt-NHZ">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="6fm-Ig-BZM">
+            <objects>
+                <viewController id="9O1-Dt-NHZ" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="30L-5d-9gy"/>
+                        <viewControllerLayoutGuide type="bottom" id="Gwc-B7-WR2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PCQ-HV-oDC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YpE-9z-u08">
+                                <rect key="frame" x="20" y="960" width="728" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="zwf-VH-Heq"/>
+                                </constraints>
+                                <state key="normal" title="Send Reqest">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendRequest:" destination="9O1-Dt-NHZ" eventType="touchUpInside" id="Hx1-dZ-7o3"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" text="Tap the &quot;Send Request&quot; button below to grab some content from the Internet." translatesAutoresizingMaskIntoConstraints="NO" id="XQh-aD-Sgb">
+                                <rect key="frame" x="20" y="20" width="728" height="932"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="YpE-9z-u08" secondAttribute="bottom" constant="20" symbolic="YES" id="0ia-ad-gKr"/>
+                            <constraint firstItem="XQh-aD-Sgb" firstAttribute="top" secondItem="PCQ-HV-oDC" secondAttribute="top" constant="20" symbolic="YES" id="2Ug-zS-bqQ"/>
+                            <constraint firstItem="YpE-9z-u08" firstAttribute="top" secondItem="XQh-aD-Sgb" secondAttribute="bottom" constant="8" symbolic="YES" id="3D1-Rb-fo7"/>
+                            <constraint firstItem="XQh-aD-Sgb" firstAttribute="trailing" secondItem="YpE-9z-u08" secondAttribute="trailing" id="Hos-Rw-kUD"/>
+                            <constraint firstItem="XQh-aD-Sgb" firstAttribute="leading" secondItem="YpE-9z-u08" secondAttribute="leading" id="Vgj-TZ-YvU"/>
+                            <constraint firstAttribute="trailing" secondItem="YpE-9z-u08" secondAttribute="trailing" constant="20" symbolic="YES" id="kKl-pW-qt4"/>
+                            <constraint firstItem="YpE-9z-u08" firstAttribute="leading" secondItem="PCQ-HV-oDC" secondAttribute="leading" constant="20" symbolic="YES" id="psw-0s-MVS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="XQh-aD-Sgb" id="GpX-y8-Hw1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gK3-vl-QtW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-537" y="-4"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
