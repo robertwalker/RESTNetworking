@@ -67,8 +67,8 @@ NetowrkManager also provides a property named "progress" that can be observed us
 
 Create instances of QHTTPOperation for each HTTP request you wish to send. The option will then be passed along to the shared NetworkManager instance using one of two operation modes:
 
-    BOOL isReallyQuick = <true if the HTTP response is really small otherwise use transfer operations
-    NSURL *url = <some url>
+    BOOL isReallyQuick; // Assume this exists. True when the HTTP response is quick and small, otherwise use transfer operations
+    NSURL *url; // Assume this exists
     QHTTPOperation *op = [[QHTTPOperation alloc] initWithURL:url];
     if (isReallyQuick) {
         [[NetworkManager sharedManager] addNetworkManagementOperation:op finishedTarget:self action:@selector(handleResponse:)];
@@ -85,7 +85,7 @@ When an individual operation completely your responseHandler is called and passe
         self.textView.text = responseString;
     }
 
-That about wraps up the basics of using the Networking part of this demo.
+Note: QHTTPOperation also provides initializers that accept NSURLRequest objects.
 
 Part II - REST
 
