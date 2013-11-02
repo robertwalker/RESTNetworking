@@ -88,5 +88,6 @@ When an individual operation completely your responseHandler is called and passe
 Note: QHTTPOperation also provides initializers that accept NSURLRequest objects.
 
 Part II - REST
+--------------
 
 For now contact me if you are interested in more detail about my REST support. Note that is a work in progress although it does support basic use of REST services.
