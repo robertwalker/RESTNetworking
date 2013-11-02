@@ -35,10 +35,7 @@ You may also observe the networkInUse property to manage the netwrok activity in
         // When the network manager's networkInUse property changes, update the
         // application's networkActivityIndicatorVisible property accordingly.
         if ([keyPath isEqual:@"networkInUse"]) {
-            assert(object == [NetworkManager sharedManager]);
             #pragma unused(change)
-            assert(context == NULL);
-            assert( [NSThread isMainThread] );
             [UIApplication sharedApplication].networkActivityIndicatorVisible = [NetworkManager sharedManager].networkInUse;
         } else if (NO) {   // Disabled because the super class does nothing useful with it.
             [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
